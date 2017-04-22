@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="/WEB-INF/templates/publicTemplate/publicTemplate.xhtml">
+        <ui:define name = "content">
+            
+              <script src="https://use.typekit.net/ayg4pcz.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <div class="container">
+        <img src="#{request.contextPath}/publicResources/img/youth.png" class="center-block"/>
+    
+        <div class="card card-container">
+        <h2 class='login_title text-center'>Login</h2>
+        <hr/>
+
+            <form class="form-signin" action="j_security_check" method="POST">
+                <span id="reauth-email" class="reauth-email"></span>
+                <p class="input_title" >Email</p>
+                <input type = "text" id = "inputEmail" class = "login_box" placeholder = "user01@IceCode.com" name="j_username"/>
+                <p class="input_title">Password</p>
+                <input  type="password" id="inputPassword" class="login_box" placeholder="******" name="j_password"/>
+                <div id="remember" class="checkbox">
+                    <label>
+                        
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary" type="submit">Login</button>
+            </form><!-- /form -->
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+
+
+
+
+
+
+
+  
+            
+            
+            
+        </ui:define> 
+        
+        
+    </ui:composition>
+</html>
+

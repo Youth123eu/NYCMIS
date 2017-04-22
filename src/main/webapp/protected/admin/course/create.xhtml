@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition template="/WEB-INF/templates/mainTemplate/mainTemplate.xhtml">
+        <ui:define name="content">
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <h2>
+                        Create Courses
+
+                    </h2>
+                 
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h4><a href="#{request.contextPath}/protected/dashBoard.xhtml">Dashboard</a> >>
+                        <a href="#{request.contextPath}/protected/admin/course/list.xhtml">Create Courses</a></h4>
+                    <h1>
+                        
+
+                    </h1>
+                 
+                </section>
+
+                <!-- Main content -->
+                <section class="content">
+
+                    <!-- Default box -->
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Create Course </h3>
+                           
+
+                        </div>
+                        <div class="box-body">
+                            <!--                            your codes go here-->
+                            <h:form>
+                                <p:panel id="panel">
+                                    <p:messages id="msgs"/>
+                                    <p:panelGrid columns="3" styleClass="pubGrid">
+                                        <p:outputLabel value="Course ID"/>
+                                        <p:inputText id="courseid"/>
+                                        <p:message for="courseid"/>
+                                        
+
+                                        <p:outputLabel value="Course Name"/>
+                                        <p:inputText id="name"/>
+                                        <p:message for="name"/>
+                                        
+                                        
+                                        <p:outputLabel for="startedDate" value="Started Date:"/>
+                                        <p:calendar id="startedDate"/>
+                                        <br/>
+                                        <p:outputLabel for="endDate" value="End Date:"/>
+                                        <p:calendar id="endDate"/>
+ <br/>
+                                      <p:commandButton value="Save"/>
+                                    </p:panelGrid>
+
+                                </p:panel>
+                            </h:form>
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer">
+                            Footer
+                        </div>
+                        <!-- /.box-footer-->
+                    </div>
+                    <!-- /.box -->
+
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+
+        </ui:define>
+    </ui:composition>
+
+</html>

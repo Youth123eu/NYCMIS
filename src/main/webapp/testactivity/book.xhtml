@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+    <body>
+                  
+        <h:form>
+            <h:commandButton value="all books" action="#{bookDisplayBackingBean.readAllBooksNames}"/>
+            <br/><br/>
+            <h:commandButton value="quantity" action="#{bookDisplayBackingBean.displayAllQuantity()}"/>
+             <br/><br/>
+             <h:commandButton value="reorderlevel" action="#{bookDisplayBackingBean.displayReorderLevel()}"/>
+            <br/><br/>
+            <h:commandButton value="Sinhala Novel" action="#{bookDisplayBackingBean.displaySinhalaNovel()}"/>
+            <br/><br/>
+            <h:commandButton value="Display 400 Price Novel" action="#{bookDisplayBackingBean.displayprice400Novel()}"/>
+            <br/><br/>
+            <h:commandButton value="Display total of Stock in Hand" action="#{bookDisplayBackingBean.displayTotalPriceStockInHand()}"/>
+        </h:form>
+   
+    
+   
+    </body>              
+
+     
+    
+
+</html>

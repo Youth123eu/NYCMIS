@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/WEB-INF/templates/mainTemplate/mainTemplate.xhtml">
+        <ui:define name="content">
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <h2>
+                    Movie
+
+                </h2>
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h4><a href="#{request.contextPath}/protected/dashBoard.xhtml">Dashboard</a> >>
+                        <a href="#{request.contextPath}/protected/admin/course/list.xhtml">Add Applicants</a></h4>
+
+
+                </section>
+
+                <!-- Main content -->
+                <section class="content">
+
+                    <!-- Default box -->
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">All Applicants</h3>
+
+
+                        </div>
+                        <div class="box-body">
+                            <!--                            your codes go here-->
+                            <h:form>
+                                <p:growl id="growl" sticky="true" showDetail="true"/>
+
+                                <p:wizard flowListener="#">
+                                    
+                                    <p:tab id="coursedetail" title="Course Detail">
+
+                                        <p:panel id="panel">
+                                            <p:messages id="msgs"/>
+                                            <p:panelGrid columns="3" styleClass="pubGrid">
+
+                                                <p:outputLabel value="Institute"/>
+                                                <p:inputText id="institute"/>
+                                                <p:message for="institute"/>
+
+                                                <p:outputLabel value="Center"/>
+                                                <p:inputText id="center"/>
+                                                <p:message for="center"/>
+
+                                                <p:outputLabel value="Course Code"/>
+                                                <p:inputText id="code"/>
+                                                <p:message for="code"/>
+
+                                                <p:outputLabel value="Year"/>
+                                                <p:inputText id="year"/>
+                                                <p:message for="year"/>
+                                                
+                                            </p:panelGrid>
+                                        </p:panel>
+                                    </p:tab>
+
+
+                                    <p:tab id="personal" title="Personal Detail">
+                                        
+                                        <p:panel header ="personal">
+                                            <p:messages id="msgs"/>
+                                            <p:panelGrid columns="3" styleClass="pubGrid">
+                                                
+                                                <p:outputLabel value="Student ID"/>
+                                                <p:inputText id="studentid"/>
+                                                <p:message for="studentid"/>
+
+                                                <p:outputLabel value="NIC"/>
+                                                <p:inputText id="nic"/>
+                                                <p:message for="nic"/>
+
+                                                <p:outputLabel value="Medium"/>
+                                                <p:inputText id="medium"/>
+                                                <p:message for="medium"/>
+                                                
+                                                <p:outputLabel value="Full Name"/>
+                                                <p:inputText id="fullname"/>
+                                                <p:message for="fullname"/>
+
+
+                                                <p:outputLabel value="Name with Initials"/>
+                                                <p:inputText id="namewithinitials"/>
+                                                <p:message for="namewithinitials"/>
+                                                 </p:panelGrid>
+
+                                        </p:panel>
+                                    </p:tab>     
+                                                
+                                                
+                                      <p:tab id="address" title="Address">
+                                        
+                                        <p:panel header ="address">
+                                            <p:messages id="msgs"/>
+                                            <p:panelGrid columns="3" styleClass="pubGrid">
+
+                                                <p:outputLabel value="Address1"/>
+                                                <p:inputText id="address1"/>
+                                                <p:message for="address1"/>
+                                               
+                                                  <p:outputLabel value="Address2"/>
+                                                <p:inputText id="address2"/>
+                                                <p:message for="address2"/>
+                                                
+                                                  <p:outputLabel value="Address3"/>
+                                                <p:inputText id="address3"/>
+                                                <p:message for="address3"/>
+                                                
+                                                <p:commandButton value="Save"/>
+                                            </p:panelGrid>
+
+                                        </p:panel>
+                                    </p:tab>
+                                </p:wizard>
+                            </h:form>  
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer">
+                            Footer
+                        </div>
+                        <!-- /.box-footer-->
+                    </div>
+                    <!-- /.box -->
+
+                </section>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+        </ui:define>
+    </ui:composition>
+</html>
+

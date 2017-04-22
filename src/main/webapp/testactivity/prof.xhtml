@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+    <body>
+                  
+        <h:form>
+            <h:commandButton value="Profit" action="#{profitAddMangedBean.callingToDisplayNetProfit()}"/>
+            
+           
+            
+            
+        </h:form>
+    
+    <br/>
+    
+    <h:form>
+        
+        <h:commandButton value="Months" action="#{monthAddManagedBean.getMonthList()}"/>
+    </h:form>
+    
+    <br/>
+    
+     <h:form>
+         <h:commandButton value="More13000" action="#{profitAddMangedBean.callingMoreProfit()}"/>
+                   
+        </h:form>
+    
+    <br/>
+    
+    <h:form>
+         <h:commandButton value="NumOfMonthsMore13000" action="#{profitAddMangedBean.callingNumOfMoreProfit()}"/>
+                   
+        </h:form>
+    
+    <br/>
+    
+    <h:form>
+        <h:commandButton value="Update" action = "#{employeeAddManagedBean.updateSalary()}"/>
+                   
+        </h:form>
+    
+   
+    </body>              
+
+     
+    
+
+</html>
